@@ -1,0 +1,29 @@
+[project]
+name = "nlp-with-transformers_book"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Dmitry Pavlyukevich", email = "dimonpd@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "datasets>=5.1.0",
+    "polars>=2.1.0",
+    "torch>=2.15.0",
+    "transformers>=5.22.2",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "lab>=8.10",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
